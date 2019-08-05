@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>To Do App</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="todo.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body>
+
+  <div class="blurr"></div>
+  <div class="container">
+    <div class="jumbotron first">
+      <h2 class="">HELLO</h2>
+      <p class="count-tasks"><span>0</span> tasks remaining</p>
+    </div>
+
+    <div class="row">
+      <div class="jumbotron col-4">
+        <div class="tasks-list">
+
+          <div class="list-header">
+            <h3>My List</h3>
+          </div>
+
+          <div class="add-list">
+            <input type="text" class="input-new-list" placeholder="create new list" />
+            <button class="add ad-list">+</button>
+          </div>
+
+          <ul class="lists" data-lists>
+            <!-- <li class="list-name">list 1</li>
+                        <li class="list-name">list 2</li>
+                        <li class="list-name">list 3</li> -->
+          </ul>
+          <!-- <select class="custom-select mr-sm-2">
+                        <option>list 1</option>
+                        <option>list 2</option>
+                        <option>list 3</option>
+                    </select> -->
+        </div>
+      </div>
+      <div class="col-1"></div>
+
+      <div class="jumbotron col-7">
+        <div class="todo-list">
+          <div class="todo-header">
+            <h3 class="list-title" data-list-title>No List Selected</h3>
+            <div class="add-tasks">
+              <input type="text" class="input-new-task" placeholder="enter new task" />
+              <button class="add ad-task">+</button>
+            </div>
+          </div>
+
+          <div class="todo-body">
+            <div class="todo-tasks" data-tasks>
+              <!-- <div class="task">
+                                <input type="checkbox" class="check-box" name="" id="task1">
+                                <label for="task1">task 1</label>
+                                <i class="material-icons">
+                                    delete_forever
+                                </i>
+                            </div>
+                            <div class="task">
+                                <input type="checkbox" class="check-box" name="" id="task2">
+                                <label for="task2">task 2</label>
+                                <i class="material-icons">
+                                    delete_forever
+                                </i>
+                            </div>
+                            <div class="task">
+                                <input type="checkbox" class="check-box" name="" id="task3">
+                                <label for="task3">task 3</label>
+                                <i class="material-icons">
+                                    delete_forever
+                                </i>
+                            </div> -->
+            </div>
+          </div>
+
+          <div class="delete-stuff">
+            <button class="delete del-tasks">clear completed tasks</button>
+            <button class="delete del-list">delete list</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="todo.js"></script>
+
+</html>

@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.blurr {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-image: url("back.jpg");
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: cover;
+  filter: blur(2px);
+}
+
+.container {
+  max-width: 700px;
+}
+
+.jumbotron.first,
+.jumbotron.col-4,
+.jumbotron.col-7 {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0;
+  height: min-content;
+}
+
+.jumbotron.first {
+  background-image: url("back.jpg");
+  background-size: 150%;
+  background-position: 0%;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  transition: background-position 5s;
+  border: 15px solid #4fcaf065;
+}
+
+.jumbotron.col-4 {
+  background-image: linear-gradient(180deg, #2196f3, #0b5e93);
+}
+
+.jumbotron.col-7 {
+  background-image: linear-gradient(180deg, #c45902, #791908);
+  background-size: cover;
+  background-repeat: repeat-y;
+  background-position: top;
+}
+
+.jumbotron.first:hover {
+  background-position: right;
+}
+
+.jumbotron.first h2 {
+  font-size: 20vmin;
+  letter-spacing: 5px;
+  color: white;
+  mix-blend-mode: overlay;
+  transition: color 4s;
+  text-shadow: 0 0 5px white;
+  filter: blur(6px);
+}
+
+.count-tasks {
+  float: right;
+  margin: 15px;
+}
+
+input {
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid #dddddd7d;
+  transform: all 15s;
+  transform-origin: left;
+  font-size: 2vmin;
+}
+
+input:focus {
+  border-color: #ffffffe0;
+}
+
+.line-through {
+  text-decoration: line-through;
+  text-decoration-color: red;
+  filter: blur(3px);
+}
+
+h3 {
+  mix-blend-mode: overlay;
+  font-size: 4vmin;
+}
+
+.tasks-list {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 10px;
+  position: relative;
+}
+
+.add-list {
+  width: 100%;
+  padding: 0;
+  margin: auto;
+}
+
+.add-list .input-new-list {
+  width: 79%;
+}
+
+.add:hover {
+  transform: scale(1.2);
+  text-shadow: 0 0 5px white;
+  cursor: pointer;
+}
+
+ul {
+  left: 30%;
+  margin: auto;
+  font-size: 2.5vmin;
+  margin-top: 20px;
+  line-height: 1.5em;
+  width: max-content;
+  max-width: 80%;
+}
+
+ul li {
+  /* to make the bullitins inside the block */
+  list-style-position: inside;
+  list-style-type: circle;
+  /* used to make the larger text leaning outside
+  the block hidden and show as ellipsis(...) */
+  overflow: hidden;
+  color: #ffffff80;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 50px;
+  /* to slow down the effects */
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.selected-list {
+  color: #ffffff;
+  box-shadow: 0 0 5px #0000009d;
+  list-style-type: disc;
+  border: 5px solid black;
+  background: black;
+  /* transform: scale(1.1); */
+}
+
+.list-name:hover {
+  color: white;
+  transform: scale(1.05);
+}
+
+.todo-header {
+  padding: 5px;
+  /*background-image: url("bac4.png");
+  height:100px;
+
+  background-size: cover;
+  background-repeat: repeat-y;
+  background-position: center;*/
+}
+
+.add-tasks {
+  width: 95%;
+  margin: auto;
+}
+
+.add-tasks .input-new-task {
+  width: 80%;
+}
+
+.todo-body {
+  width: 100%;
+}
+
+.todo-tasks {
+  margin: 20px auto;
+  width: 95%;
+}
+
+.todo-tasks .task {
+  width: 100%;
+  position: relative;
+  background: #ffffff1c;
+  margin-bottom: 12px;
+  /* border: 2px solid #ffffff49; */
+}
+
+.task:hover {
+  background: linear-gradient(90deg, #ffffff36, #ffffff79, #ffffff36);
+  /* border: 1px solid #ffffff49; */
+}
+
+.task label {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  width: 75%;
+  font-size: 2.5vmin;
+  color: #ffffffdc;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+[type="checkbox"] {
+  cursor: pointer;
+  margin-left: 7px;
+}
+
+.check-box {
+  position: absolute;
+  background-color: #eeeeee1d;
+  top: 0;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+/* When the checkbox is checked, add a blue background */
+.task input:checked ~ .check-box {
+  background-color: #2196f3;
+}
+
+.task i {
+  margin: 0;
+  margin-right: 2px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%) scale(1);
+  mix-blend-mode: overlay;
+}
+
+.task i:hover {
+  transform: translate(0, -50%) scale(1.2);
+  cursor: pointer;
+  mix-blend-mode: hard-light;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  color: white;
+  font-size: 30px;
+  transition: all 0.5s;
+}
+
+.delete {
+  font-size: 2vmin;
+  margin: 15px;
+}
